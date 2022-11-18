@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: #000000;
+}
+body{
+    background-color: #d7d3d37c;
+}
+.section {
+    width: 60%;
+    margin: 50px auto;
+}
+.body{
+    margin: 0 20px 0 30px;
+}
+h2 {
+    text-transform: uppercase;
+}
+hr{
+    margin-top: 10px;
+}
+.span a {
+    position: absolute;
+    right: 20%;
+    top: 45px;
+}
+
+a {
+    color: #4646dc !important;
+    border: 1px #000000 solid;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.about,
+.practice,
+.contact {
+    margin-top: 1.5rem;
+}
+
+ol {
+    margin-left: 50px;
+}
+
+p {
+    margin-top: 1rem;
+}
+
+.footer {
+    text-align: end;
+    margin-top: 20px;
+    background-color: #000;
+    color: #ffff;
+    border: 1px #000 solid;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+    .section {
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+    hr{
+        margin-top: 30px;
+    }
+    .span a {
+        position: relative;
+        top: 20px;
+        left: 70%;
+        right: 0;
+    }
+    .footer {
+        text-align: center;
+    }
+}
