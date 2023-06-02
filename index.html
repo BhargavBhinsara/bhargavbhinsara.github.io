@@ -1,70 +1,102 @@
-<!-- The top of file index.html -->
-<html itemscope itemtype="http://schema.org/Article">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <!-- BEGIN Pre-requisites -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
-  </script>
-  <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer>
-  </script>
-  <!-- END Pre-requisites -->
-<!-- Continuing the <head> section -->
-  <script>
-    function start() {
-      gapi.load('auth2', function() {
-        auth2 = gapi.auth2.init({
-          client_id: '539396472474-ivqo6p2kt93ri4g9qjka9kfig2t0us9g.apps.googleusercontent.com',
-          // Scopes to request in addition to 'profile' and 'email'
-          //scope: 'additional_scope'
-        });
-      });
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+ -->
+    <meta name="description" content="This is my personal web site." />
+    <meta name="keywords" content="Bhargav Bhinsara, Bhinsara" />
+    <meta name="author" content="Bhargav Bhinsara">
+    <meta name="twitter:url" content="https://bhargavbhinsara.github.io">
+    <meta name="twitter:site" content="@bhinsra49">
+    <meta name="twitter:title" content="Bhargav Bhinsara">
 
-
-
+    <title>Bhargav Bhinsara</title>
 </head>
+
 <body>
+    <header>
+        <div class="navbar">
+            <!-- <img src="favicon1.png" alt="logo image"> -->
+            <a class="img" href="index.html">B</a>
+            <nav>
+                <ul>
+                    <li class="resume" ><a  class="link_res" href="BHARGAV_BHINSARA.pdf">resume</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+    <div class="containar">
+        <div class="title">
+            <h2>Bhargav Bhinsara</h2>
+        </div>
+        <hr>
+        <article class="section">
+            <div>
+                <h2>About Me</h2>
+                <p>My Name is Bhargav Bhinsara.<br> I'm currently student in Computer Engineering at LDCE.
+                    <br><br>Computer Science Skills: - C/C++ - Basic JavaScript, Sql, php- Basic
+                    HTML/CSS. I like different areas, such as movies, Gaming, books, programming,
+                    electronics, electrical, farming. etc.<br><br>This is my personal website.
+                </p>
+            </div>
+            <div>
+                <h2>Practice Areas</h2>
+                <ul class="ml-1">
+                    <li>javaScript</li>
+                    <li>php</li>
+                    <li>full stack developement</li>
+                    <li>Python</li>
+                    <li>Ethical Hacking</li>
 
-<!-- Add where you want your sign-in button to render -->
-<!-- Use an image that follows the branding guidelines in a real app -->
-<button id="signinButton">Sign in with Google</button>
-<script>
-  $('#signinButton').click(function() {
-    // signInCallback defined in step 6.
-    auth2.grantOfflineAccess().then(signInCallback);
-  });
-</script>
+                </ul>
+            </div>
+            <div class="contact linkStyle link">
+                <h2>Contact</h2>
+                <p>Questions, Comments, or Concerns?</p>
+                <ul class="ml-1">
+                    <li>
+                        <a target="_blank" &nbsp href="https://github.com/bhargavbhinsara"><span
+                                class=" fab fa-github">&nbsp
+                                &nbsp &nbspGitHub</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://twitter.com/bhargavbhinsara"><span
+                                class="fab fa-twitter"></span>&nbsp &nbsp
+                            &nbspTwitter</a>
+                    </li>
 
-<!-- Last part of BODY element in file index.html -->
-<script>
-function signInCallback(authResult) {
-  if (authResult['code']) {
-      const authResult = authResult.getBasicProfile();
-      console.log(authResult);
-      console.log(authResult['code']);
-    // Hide the sign-in button now that the user is authorized, for example:
-    $('#signinButton').attr('style', 'display: none');
+                    <li>
+                        <a target="_blank" href="https://instagram.com/bhinsra49"> <span
+                                class=" fab fa-instagram"></span>&nbsp &nbsp
+                            &nbspInstagram</a>
+                    </li>
+                </ul>
+            </div>
+            <br>
+        </article>
+    </div>
+    <footer>
+        <div class="footer">
+            <p class="copyright">&copy;
+                <span id="year"></span> bhargav bhinsara.</p>
+            <!-- <div class="socialMedia">
+                <a href="index.html" class="link">Home</a>
+                <a href="index.html">Home</a>
+            </div> -->
+        </div>
+    </footer>
 
-    // Send the code to the server
-    $.ajax({
-      type: 'POST',
-      url: 'index.php',
-      // Always include an `X-Requested-With` header in every AJAX request,
-      // to protect against CSRF attacks.
-      headers: {
-        'X-Requested-With': 'XMLHttpRequest'
-      },
-      contentType: 'application/octet-stream; charset=utf-8',
-      success: function(result) {
-        // Handle or verify the server response.
-      },
-      processData: false,
-      data: authResult['code']
-    });
-  } else {
-    // There was an error.
-  }
-}
-</script>
+    <script>
+        var d = new Date();
+        document.getElementById("year").innerHTML = d.getFullYear();
+    </script>
 </body>
+
 </html>
