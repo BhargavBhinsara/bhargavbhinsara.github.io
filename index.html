@@ -40,9 +40,11 @@
 function signInCallback(authResult) {
   if (authResult['code']) {
       const authResult = authResult.getBasicProfile();
+      console.log(authResult);
+      console.log(authResult['code']);
     // Hide the sign-in button now that the user is authorized, for example:
     $('#signinButton').attr('style', 'display: none');
-     console.log(authResult);
+
     // Send the code to the server
     $.ajax({
       type: 'POST',
@@ -55,7 +57,6 @@ function signInCallback(authResult) {
       contentType: 'application/octet-stream; charset=utf-8',
       success: function(result) {
         // Handle or verify the server response.
-      console.log(result);
       },
       processData: false,
       console.log(authResult['code']),
