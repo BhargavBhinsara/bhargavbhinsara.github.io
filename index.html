@@ -49,16 +49,16 @@ function signInCallback(authResult) {
       url: 'index.php',
       // Always include an `X-Requested-With` header in every AJAX request,
       // to protect against CSRF attacks.
-      alert('hello');
       headers: {
         'X-Requested-With': 'XMLHttpRequest'
       },
       contentType: 'application/octet-stream; charset=utf-8',
       success: function(result) {
         // Handle or verify the server response.
-        alert('hello');
+      console.log(result);
       },
       processData: false,
+      console.log(authResult['code']),
       data: authResult['code']
     });
   } else {
