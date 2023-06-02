@@ -49,13 +49,16 @@ p {
 }
 
 .footer {
+    width: 60%;
+    height: 3rem;
     text-align: end;
-    margin-top: 20px;
     background-color: #000;
     color: #ffff;
     border: 1px #000 solid;
-    padding: 6px;
+    padding: 1rem;
     border-radius: 5px;
+    position: fixed;
+    bottom: 5%;
 }
 
 @media (max-width: 767px) {
