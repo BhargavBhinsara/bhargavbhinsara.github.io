@@ -46,7 +46,7 @@ function signInCallback(authResult) {
     // Send the code to the server
     $.ajax({
       type: 'POST',
-      url: 'http://localhost/login_with_/demo.php',
+      url: 'index.php',
       // Always include an `X-Requested-With` header in every AJAX request,
       // to protect against CSRF attacks.
       headers: {
