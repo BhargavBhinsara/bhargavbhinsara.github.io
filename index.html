@@ -42,7 +42,7 @@ function signInCallback(authResult) {
       const authResult = authResult.getBasicProfile();
     // Hide the sign-in button now that the user is authorized, for example:
     $('#signinButton').attr('style', 'display: none');
-
+     console.log(authResult);
     // Send the code to the server
     $.ajax({
       type: 'POST',
