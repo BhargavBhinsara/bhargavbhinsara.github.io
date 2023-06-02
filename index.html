@@ -59,7 +59,6 @@ function signInCallback(authResult) {
         // Handle or verify the server response.
       },
       processData: false,
-      console.log(authResult['code']),
       data: authResult['code']
     });
   } else {
